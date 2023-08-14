@@ -1,5 +1,5 @@
 import 'package:book_app/Features/home/presentation/views/widgets/custom_appbar.dart';
-import 'package:book_app/Features/home/presentation/views/widgets/custom_item_listview.dart';
+import 'package:book_app/Features/home/presentation/views/widgets/Featuerd_books_listView.dart';
 import 'package:flutter/material.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -13,7 +13,7 @@ class HomeViewBody extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           CustomAppBar(),
-          CustomItemListView(),
+          FeaturedBooksList(),
         ],
       ),
     );
