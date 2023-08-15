@@ -1,5 +1,6 @@
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_details_appbar.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_image.dart';
+import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -18,6 +19,12 @@ class BookDetailsViewBody extends StatelessWidget {
             height:MediaQuery.of(context).size.height*0.31,
             child: CustomBookImage(),
           ),
+          SizedBox(height: 43,),
+          Text('The Jungle Book',style: Styles.textStyle30,),
+          SizedBox(height: 6,),
+          Text('Rudyard Kipling',style: Styles.textStyle18.copyWith(
+            color: Colors.white.withOpacity(0.7),
+          ),),
         ],
       ),
     );
