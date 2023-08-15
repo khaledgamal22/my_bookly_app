@@ -1,5 +1,9 @@
+import 'package:book_app/constant.dart';
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+import 'book_rating.dart';
 
 class BestSellerItem extends StatelessWidget {
   const BestSellerItem({super.key});
@@ -19,23 +23,56 @@ class BestSellerItem extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage('assets/images/test_image.png'),
                   fit: BoxFit.fill,
-                  ),
+                ),
               ),
             ),
           ),
-          Column(
-            children: [
-              Text('The Jungle Book',style: Styles.textStyle20,),
-              Text('Rudyard Kipling'),
-              Row(
-                children: [
-                  Text('19.9'),
-                ],
-              )
-            ],
-          )
+          SizedBox(
+            width: 30,
+          ),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.5,
+                  child: Text(
+                    'Harry Potter and the Globel of Fire',
+                    style:
+                        Styles.textStyle20.copyWith(fontFamily: kGtFontFamily),
+                    overflow: TextOverflow.ellipsis,
+                    maxLines: 2,
+                  ),
+                ),
+                SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  'Rudyard Kipling',
+                  style: Styles.textStyle14,
+                ),
+                SizedBox(
+                  height: 3,
+                ),
+                Row(
+                  children: [
+                    Text(
+                      '19.9 €',
+                      style: Styles.textStyle20.copyWith(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Spacer(),
+                    BookRating(),
+                  ],
+                )
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
 }
+
+
