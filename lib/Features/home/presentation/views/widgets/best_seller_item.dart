@@ -1,8 +1,6 @@
 import 'package:book_app/constant.dart';
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import 'book_rating.dart';
 
 class BestSellerItem extends StatelessWidget {
