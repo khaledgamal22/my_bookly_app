@@ -4,6 +4,8 @@ import 'package:book_app/Features/home/presentation/views/widgets/custom_book_im
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
 
+import 'book_actions.dart';
+
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
 
@@ -38,10 +40,22 @@ class BookDetailsViewBody extends StatelessWidget {
               color: Colors.white.withOpacity(0.7),
             ),
           ),
-          SizedBox(height: 18,),
-          BookRating(mainAxisAlignment: MainAxisAlignment.center,)
+          SizedBox(
+            height: 18,
+          ),
+          BookRating(
+            mainAxisAlignment: MainAxisAlignment.center,
+          ),
+          SizedBox(
+            height: 37,
+          ),
+          BookActions(),
         ],
       ),
     );
   }
 }
+
+
+
+
