@@ -1,8 +1,10 @@
 import 'package:book_app/Features/home/presentation/views/widgets/best_seller_listView.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_appbar.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/Featuerd_books_listView.dart';
+import 'package:book_app/core/utilits/app_routes.dart';
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -17,7 +19,11 @@ class HomeViewBody extends StatelessWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: CustomAppBar(),
+                child: CustomAppBar(
+                  onPressed: (){
+                    GoRouter.of(context).push(Approuter.kSearchView);
+                  },
+                ),
               ),
               FeaturedBooksList(),
               SizedBox(
