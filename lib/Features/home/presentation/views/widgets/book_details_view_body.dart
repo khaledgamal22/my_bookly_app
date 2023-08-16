@@ -1,3 +1,4 @@
+import 'package:book_app/Features/home/presentation/views/widgets/Featuerd_books_listView.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/book_rating.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_details_appbar.dart';
 import 'package:book_app/Features/home/presentation/views/widgets/custom_book_image.dart';
@@ -5,6 +6,7 @@ import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
 
 import 'book_actions.dart';
+import 'similer_books_list.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
@@ -12,7 +14,7 @@ class BookDetailsViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 30, right: 30, top: 50),
+      padding: const EdgeInsets.only(left: 30, right: 30, top: 50,),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -50,11 +52,24 @@ class BookDetailsViewBody extends StatelessWidget {
             height: 37,
           ),
           BookActions(),
+          SizedBox(height: 40,),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              Text('You can also like',style: Styles.textStyle16.copyWith(
+                fontWeight: FontWeight.w600,
+              ),),
+            ],
+          ),
+          SizedBox(height: 3,),
+          SimilerBooksListView(),
         ],
       ),
     );
   }
 }
+
+
 
 
 
