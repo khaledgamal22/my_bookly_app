@@ -11,7 +11,7 @@ class BestSellerItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: (){
+      onTap: () {
         GoRouter.of(context).push(Approuter.kBookDetailsView);
       },
       child: SizedBox(
@@ -42,8 +42,8 @@ class BestSellerItem extends StatelessWidget {
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
                       'Harry Potter and the Globel of Fire',
-                      style:
-                          Styles.textStyle20.copyWith(fontFamily: kGtFontFamily),
+                      style: Styles.textStyle20
+                          .copyWith(fontFamily: kGtFontFamily),
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
                     ),
@@ -79,5 +79,3 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-
-

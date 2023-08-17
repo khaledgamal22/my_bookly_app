@@ -8,8 +8,8 @@ import '../../Features/splash/presentation/views/splash_view.dart';
 abstract class Approuter {
   static const kSplashView = '/';
   static const kHomeView = '/homeView';
-  static const kBookDetailsView='/bookDetails';
-  static const kSearchView='/searchView';
+  static const kBookDetailsView = '/bookDetails';
+  static const kSearchView = '/searchView';
   static final router = GoRouter(routes: [
     GoRoute(
       path: kSplashView,

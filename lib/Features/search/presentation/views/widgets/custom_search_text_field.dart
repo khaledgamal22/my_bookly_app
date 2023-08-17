@@ -10,20 +10,21 @@ class CustomTextSearchField extends StatelessWidget {
         hintText: 'Search',
         suffixIcon: IconButton(
           onPressed: () {},
-          icon: Icon(Icons.search,color: Colors.white.withOpacity(0.6),),
+          icon: Icon(
+            Icons.search,
+            color: Colors.white.withOpacity(0.6),
+          ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18),
-          borderSide: BorderSide(
-            color: Colors.white.withOpacity(0.7),
-          )
-        ),
+            borderRadius: BorderRadius.circular(18),
+            borderSide: BorderSide(
+              color: Colors.white.withOpacity(0.7),
+            )),
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(18),
-          borderSide: BorderSide(
-            color: Colors.white,
-          )
-        ),
+            borderRadius: BorderRadius.circular(18),
+            borderSide: BorderSide(
+              color: Colors.white,
+            )),
       ),
     );
   }

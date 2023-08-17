@@ -8,7 +8,8 @@ class CustomButton extends StatelessWidget {
       required this.title,
       required this.textColor,
       required this.backgroundColor,
-      this.borderRadius, this.fontsize});
+      this.borderRadius,
+      this.fontsize});
 
   final String title;
   final Color textColor;

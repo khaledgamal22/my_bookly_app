@@ -8,16 +8,17 @@ class SimilerBooksListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height:MediaQuery.of(context).size.height*0.14,
+      height: MediaQuery.of(context).size.height * 0.14,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
-        itemBuilder: (context,index){
+        itemBuilder: (context, index) {
           return Padding(
             padding: const EdgeInsets.only(right: 10),
             child: const CustomBookImage(),
           );
         },
       ),
-    );;
+    );
+    ;
   }
 }

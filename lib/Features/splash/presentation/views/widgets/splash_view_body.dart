@@ -1,4 +1,3 @@
-
 import 'package:book_app/core/utilits/app_routes.dart';
 import 'package:book_app/core/utilits/assets.dart';
 import 'package:flutter/material.dart';
@@ -48,20 +47,22 @@ class _SplashViewBodyState extends State<SplashViewBody>
       ],
     );
   }
+
   void initSlidingAnimation() {
     animationController = AnimationController(
       vsync: this,
       duration: const Duration(seconds: 2),
     );
-    
-    slidingAnimation = Tween<Offset>(begin: const Offset(0, 5), end: const Offset(0, 0))
-        .animate(animationController);
+
+    slidingAnimation =
+        Tween<Offset>(begin: const Offset(0, 5), end: const Offset(0, 0))
+            .animate(animationController);
     animationController.forward();
   }
+
   void transitionToHome() {
-    Future.delayed(const Duration(seconds: 2),(){
+    Future.delayed(const Duration(seconds: 2), () {
       GoRouter.of(context).push(Approuter.kHomeView);
     });
   }
 }
-
