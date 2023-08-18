@@ -15,7 +15,7 @@ class BestSellerSection extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
             child: Text(
-              'Best Seller',
+              'Newest Books',
               style: Styles.textStyle18,
             ),
           ),
