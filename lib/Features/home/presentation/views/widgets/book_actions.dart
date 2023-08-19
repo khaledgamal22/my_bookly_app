@@ -13,7 +13,7 @@ class BookActions extends StatelessWidget {
         children: [
           Expanded(
             child: CustomButton(
-              title: '19.9 €',
+              title: 'free',
               textColor: Colors.black,
               backgroundColor: Colors.white,
               borderRadius: BorderRadius.only(

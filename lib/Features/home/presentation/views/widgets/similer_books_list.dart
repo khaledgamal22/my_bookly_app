@@ -17,6 +17,7 @@ class SimilerBooksListView extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.14,
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
+            itemCount: state.books.length,
             itemBuilder: (context, index) {
               return Padding(
                 padding: const EdgeInsets.only(right: 10),
