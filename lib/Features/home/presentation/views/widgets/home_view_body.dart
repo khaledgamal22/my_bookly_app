@@ -3,7 +3,7 @@ import 'package:book_app/Features/home/presentation/views/widgets/Featuerd_books
 import 'package:book_app/core/utilits/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'best_seller_section.dart';
+import 'newest_Books_section.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -11,6 +11,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
+      physics: BouncingScrollPhysics(),
       slivers: [
         SliverToBoxAdapter(
           child: Column(
@@ -31,7 +32,7 @@ class HomeViewBody extends StatelessWidget {
             ],
           ),
         ),
-        BestSellerSection(),
+        NewestBooksSection(),
       ],
     );
   }

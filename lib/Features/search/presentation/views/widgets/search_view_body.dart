@@ -1,7 +1,8 @@
+import 'package:book_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../home/presentation/views/widgets/best_seller_item.dart';
+import '../../../../home/presentation/views/widgets/newest_book_item.dart';
 import 'custom_search_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -50,7 +51,8 @@ class SearchResultListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return Padding(
           padding: const EdgeInsets.only(bottom: 10),
-          child: BestSellerItem(),
+          //child: NewestBookItem(),
+          child: Text('data'),
         );
       },
     );

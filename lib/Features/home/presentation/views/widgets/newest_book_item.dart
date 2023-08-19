@@ -1,3 +1,5 @@
+import 'package:book_app/Features/home/data/models/book_model/book_model.dart';
+import 'package:book_app/Features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:book_app/constant.dart';
 import 'package:book_app/core/utilits/app_routes.dart';
 import 'package:book_app/core/utilits/styles.dart';
@@ -5,8 +7,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'book_rating.dart';
 
-class BestSellerItem extends StatelessWidget {
-  const BestSellerItem({super.key});
+class NewestBookItem extends StatelessWidget {
+  const NewestBookItem({super.key,required  this.book});
+
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -18,19 +22,7 @@ class BestSellerItem extends StatelessWidget {
         height: 118,
         child: Row(
           children: [
-            AspectRatio(
-              aspectRatio: 0.65,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.red,
-                  borderRadius: BorderRadius.circular(8),
-                  image: DecorationImage(
-                    image: AssetImage('assets/images/test_image.png'),
-                    fit: BoxFit.fill,
-                  ),
-                ),
-              ),
-            ),
+            CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail??'',),
             SizedBox(
               width: 30,
             ),
@@ -41,7 +33,7 @@ class BestSellerItem extends StatelessWidget {
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.5,
                     child: Text(
-                      'Harry Potter and the Globel of Fire',
+                      book.volumeInfo.title,
                       style: Styles.textStyle20
                           .copyWith(fontFamily: kGtFontFamily),
                       overflow: TextOverflow.ellipsis,
@@ -52,8 +44,10 @@ class BestSellerItem extends StatelessWidget {
                     height: 3,
                   ),
                   Text(
-                    'Rudyard Kipling',
+                    book.volumeInfo.authors?[0]??'unknown',
                     style: Styles.textStyle14,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
                   ),
                   SizedBox(
                     height: 3,
@@ -61,7 +55,7 @@ class BestSellerItem extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        '19.9 €',
+                        'free',
                         style: Styles.textStyle20.copyWith(
                           fontWeight: FontWeight.bold,
                         ),

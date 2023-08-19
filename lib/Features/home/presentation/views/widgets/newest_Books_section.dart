@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 import '../../../../../core/utilits/styles.dart';
-import 'best_seller_listView.dart';
+import 'newest_books_listView.dart';
 
-class BestSellerSection extends StatelessWidget {
-  const BestSellerSection({super.key});
+class NewestBooksSection extends StatelessWidget {
+  const NewestBooksSection({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class BestSellerSection extends StatelessWidget {
           ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 30),
-            child: BestSellerListView(),
+            child: NewestBooksListView(),
           ),
         ],
       ),
