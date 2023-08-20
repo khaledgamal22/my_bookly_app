@@ -16,7 +16,7 @@ class SearchRepoImplementation implements SearchRepo {
     try {
       var data = await apiService.get(
         endpoint:
-            'https://www.googleapis.com/books/v1/volumes?Filtering=free-ebooks&q=$word',
+            'volumes?Filtering=free-ebooks&q=$word',
       );
       List<BookModel> books=[];
       for (var item in data['items']) {
