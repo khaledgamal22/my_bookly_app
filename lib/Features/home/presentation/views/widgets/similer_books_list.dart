@@ -33,12 +33,11 @@ class SimilerBooksListView extends StatelessWidget {
           return CustomError(errorMessage: state.errorMessage);
         }
         else{
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }
       },
     );
-    ;
   }
 }

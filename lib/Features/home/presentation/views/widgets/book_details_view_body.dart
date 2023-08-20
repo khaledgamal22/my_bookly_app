@@ -21,14 +21,14 @@ final BookModel bookModel;
                 const EdgeInsets.only(left: 30, right: 30, top: 50, bottom: 24),
             child: Column(
               children: [
-                CustomBookDetailsAppBar(),
+                const CustomBookDetailsAppBar(),
                 BookDetailsSection(bookModel: bookModel,),
-                Expanded(
+                const Expanded(
                   child: SizedBox(
                     height: 40,
                   ),
                 ),
-                SimilerBooksSection(),
+                const SimilerBooksSection(),
               ],
             ),
           ),

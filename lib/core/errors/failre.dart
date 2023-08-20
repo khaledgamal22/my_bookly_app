@@ -10,20 +10,20 @@ class ServerFailre extends Failre {
   ServerFailre(super.errorMessage);
 
   factory ServerFailre.fromDioError(DioException dioException) {
-    switch (DioExceptionType) {
-      case DioExceptionType.sendTimeout:
+    switch (DioException) {
+      case DioException.sendTimeout:
         return ServerFailre('Send timeout with ApiServer');
 
-      case DioExceptionType.connectionTimeout:
+      case DioException.connectionTimeout:
         return ServerFailre('Connection timeout with ApiServer');
 
       case DioExceptionType.cancel:
         return ServerFailre('Canceled');
 
-      case DioExceptionType.receiveTimeout:
+      case DioException.receiveTimeout:
         return ServerFailre('Receive timeout with ApiServer');
 
-      case DioExceptionType.badResponse:
+      case DioException.badResponse:
         return ServerFailre.fromResponseError(
           dioException.response!.statusCode!,
           dioException.response!.data,

@@ -13,14 +13,14 @@ class CustomBookDetailsAppBar extends StatelessWidget {
           onPressed: () {
             GoRouter.of(context).pop();
           },
-          icon: Icon(
+          icon: const Icon(
             Icons.close,
             size: 28,
           ),
         ),
         IconButton(
           onPressed: () {},
-          icon: Icon(Icons.shopping_cart_outlined),
+          icon: const Icon(Icons.shopping_cart_outlined),
         ),
       ],
     );

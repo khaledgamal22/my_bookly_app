@@ -23,7 +23,7 @@ class NewestBookItem extends StatelessWidget {
         child: Row(
           children: [
             CustomBookImage(imageUrl: book.volumeInfo.imageLinks?.thumbnail??'',),
-            SizedBox(
+            const SizedBox(
               width: 30,
             ),
             Expanded(
@@ -40,7 +40,7 @@ class NewestBookItem extends StatelessWidget {
                       maxLines: 2,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Text(
@@ -49,7 +49,7 @@ class NewestBookItem extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 3,
                   ),
                   Row(
@@ -60,8 +60,8 @@ class NewestBookItem extends StatelessWidget {
                           fontWeight: FontWeight.bold,
                         ),
                       ),
-                      Spacer(),
-                      BookRating(),
+                      const Spacer(),
+                      BookRating(book: book,),
                     ],
                   )
                 ],

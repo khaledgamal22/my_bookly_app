@@ -14,7 +14,7 @@ class NewestBooksListView extends StatelessWidget {
         if(state is NewestBooksSuccess){
           return ListView.builder(
           shrinkWrap: true,
-          physics: NeverScrollableScrollPhysics(),
+          physics: const NeverScrollableScrollPhysics(),
           itemCount: state.books.length,
           padding: EdgeInsets.zero,
           itemBuilder: (context, index) {
@@ -29,7 +29,7 @@ class NewestBooksListView extends StatelessWidget {
           return CustomError(errorMessage: state.errorMessage);
         }
         else{
-          return Center(child: CircularProgressIndicator(),);
+          return const Center(child: CircularProgressIndicator(),);
         }
       },
     );

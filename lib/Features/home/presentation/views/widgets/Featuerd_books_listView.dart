@@ -17,7 +17,7 @@ class FeaturedBooksList extends StatelessWidget {
           return SizedBox(
             height: MediaQuery.of(context).size.height * 0.31,
             child: ListView.builder(
-              physics: BouncingScrollPhysics(),
+              physics: const BouncingScrollPhysics(),
               scrollDirection: Axis.horizontal,
               itemCount: state.books.length,
               itemBuilder: (context, index) {
@@ -38,7 +38,7 @@ class FeaturedBooksList extends StatelessWidget {
         } else if (state is FeaturedBooksFailure) {
           return CustomError(errorMessage: state.errorMessage);
         } else {
-          return Center(
+          return const Center(
             child: CircularProgressIndicator(),
           );
         }

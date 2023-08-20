@@ -19,7 +19,7 @@ class BookDetailsSection extends StatelessWidget {
           height: MediaQuery.of(context).size.height * 0.31,
           child: CustomBookImage(imageUrl: bookModel.volumeInfo.imageLinks?.thumbnail??'',),
         ),
-        SizedBox(
+        const SizedBox(
           height: 43,
         ),
         Text(
@@ -27,7 +27,7 @@ class BookDetailsSection extends StatelessWidget {
           style: Styles.textStyle30,
           textAlign: TextAlign.center,
         ),
-        SizedBox(
+        const SizedBox(
           height: 6,
         ),
         Text(
@@ -36,16 +36,17 @@ class BookDetailsSection extends StatelessWidget {
             color: Colors.white.withOpacity(0.7),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 18,
         ),
         BookRating(
           mainAxisAlignment: MainAxisAlignment.center,
+          book: bookModel,
         ),
-        SizedBox(
+        const SizedBox(
           height: 37,
         ),
-        BookActions(),
+        BookActions(book: bookModel,),
       ],
     );
   }

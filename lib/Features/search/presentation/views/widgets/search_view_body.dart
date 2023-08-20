@@ -1,8 +1,6 @@
-import 'package:book_app/Features/home/data/models/book_model/book_model.dart';
 import 'package:book_app/core/utilits/styles.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../home/presentation/views/widgets/newest_book_item.dart';
 import 'custom_search_text_field.dart';
 
 class SearchViewBody extends StatelessWidget {
@@ -10,8 +8,8 @@ class SearchViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(
+    return const Padding(
+      padding: EdgeInsets.symmetric(
         horizontal: 24,
       ),
       child: Column(
@@ -49,13 +47,12 @@ class SearchResultListView extends StatelessWidget {
       itemCount: 10,
       padding: EdgeInsets.zero,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(bottom: 10),
+        return const Padding(
+          padding: EdgeInsets.only(bottom: 10),
           //child: NewestBookItem(),
           child: Text('data'),
         );
       },
     );
-    ;
   }
 }
