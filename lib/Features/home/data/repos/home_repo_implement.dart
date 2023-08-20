@@ -19,12 +19,8 @@ class HomeRepoImplementation implements HomeRepo {
 
       List<BookModel> bookslist = [];
       for (var item in data['items']) {
-        try{
-          bookslist.add(BookModel.fromJson(item));
-        }catch(e){
           bookslist.add(BookModel.fromJson(item));
         }
-      }
       return right(bookslist);
     } catch (e) {
       if (e is DioException) {
